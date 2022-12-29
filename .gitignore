@@ -2,5 +2,5 @@ env
 env*
 */*.joblib
 */*xgboost.json
-*xgboost-serving/agaricus.txt.test
-*xgboost-serving/agaricus.txt.train
+*/*agaricus.txt.test
+*/*agaricus.txt.train
