@@ -5,3 +5,4 @@ env*
 */*agaricus.txt.test
 */*agaricus.txt.train
 __pycache__
+*/*mlruns
