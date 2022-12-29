@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 from sklearn.datasets import load_svmlight_file
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
+import json
 
 
 def test_sklearn():
@@ -31,6 +32,9 @@ def test_sklearn():
     }
 
     endpoint = "http://localhost:8080/v2/models/mnist-svm/versions/v0.1.0/infer"
+    response = requests.post(endpoint, json=inference_request)
+    
+    json.dump(inference_request, open("sklearn_inference_request.json", "w"))
     response = requests.post(endpoint, json=inference_request)
 
     print(response.json())
@@ -77,6 +81,9 @@ def test_xgboost():
     }
 
     endpoint = "http://localhost:8080/v2/models/mushroom-xgboost/versions/v0.1.0/infer"
+    response = requests.post(endpoint, json=inference_request)
+    
+    json.dump(inference_request, open("xgboost_inference_request.json", "w"))
     response = requests.post(endpoint, json=inference_request)
 
     print(response.json())
