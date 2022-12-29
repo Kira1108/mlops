@@ -55,8 +55,7 @@ firstname_meta = ColumnMeta(
 
 age_meta = ColumnMeta(
     name="age", 
-    datatype = 'INT32', 
-    data=[34, 33])
+    datatype = 'INT32', )
 
 ms_settings = ModelSettings(
     name = 'mymodel', 
