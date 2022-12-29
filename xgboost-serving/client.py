@@ -47,7 +47,10 @@ inference_request = {
     ]
 }
 
-endpoint = "http://localhost:8081/v2/models/mushroom-xgboost/versions/v0.1.0/infer"
-response = requests.post(endpoint, json=inference_request)
+endpoint = "http://localhost:8080/v2/models/mushroom-xgboost/versions/v0.1.0/infer"
 
+import json
+
+json.dump(inference_request, open("inference_request.json", "w"))
+response = requests.post(endpoint, json=inference_request)
 print(response.json())

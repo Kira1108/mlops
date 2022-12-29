@@ -1,0 +1,5 @@
+mlserver
+scikit-learn
+xgboost
+mlserver-sklearn
+mlserver-xgboost
