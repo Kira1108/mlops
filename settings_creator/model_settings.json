@@ -1,0 +1,52 @@
+{
+  "name": "Mymodel",
+  "implementation": "mlserver_sklearn.SKLearnModel",
+  "parameters": {
+    "uri": "gs://mybucket/mymodel.pkl",
+    "version": "v0.1.1"
+  },
+  "inputs": [
+    {
+      "name": "sepal length (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "sepal width (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "petal length (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "petal width (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "add_col",
+      "datatype": "BYTES",
+      "parameters": {
+        "content_type": "str"
+      },
+      "shape": [
+        -1
+      ]
+    }
+  ]
+}
