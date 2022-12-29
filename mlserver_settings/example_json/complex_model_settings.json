@@ -1,0 +1,28 @@
+{
+    "name": "mymodel",
+    "implementation": "mlserver_sklearn.SKLearnModel",
+    "parameters": {
+        "uri": "gs://mybucket/mymodel.pkl",
+        "version": "v0.1.1"
+    },
+    "inputs": [
+        {
+            "name": "firstname",
+            "datatype": "BYTES",
+            "parameters": {
+                "content_type": "str"
+            },
+            "shape": [
+                -1
+            ]
+        },
+        {
+            "name": "age",
+            "datatype": "INT32",
+            "parameters": null,
+            "shape": [
+                -1
+            ]
+        }
+    ]
+}

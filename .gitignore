@@ -4,3 +4,4 @@ env*
 */*xgboost.json
 */*agaricus.txt.test
 */*agaricus.txt.train
+__pycache__

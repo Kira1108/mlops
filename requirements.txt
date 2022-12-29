@@ -1,6 +1,7 @@
 mlserver
 scikit-learn
 xgboost
+mlflow
 mlserver-sklearn
 mlserver-xgboost
 mlserver-mlflow

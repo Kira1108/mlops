@@ -1,0 +1,9 @@
+{
+    "name": "mymodel",
+    "implementation": "mlserver_sklearn.SKLearnModel",
+    "parameters": {
+        "uri": "gs://mybucket/mymodel.pkl",
+        "version": "v0.1.1"
+    },
+    "inputs": null
+}

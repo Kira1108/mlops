@@ -1,0 +1,34 @@
+{
+    "content_type": null,
+    "parameters": {
+        "content_type": "pd"
+    },
+    "inputs": [
+        {
+            "name": "firstname",
+            "datatype": "BYTES",
+            "parameters": {
+                "content_type": "str"
+            },
+            "shape": [
+                2
+            ],
+            "data": [
+                "John",
+                "Jane"
+            ]
+        },
+        {
+            "name": "age",
+            "datatype": "INT32",
+            "parameters": null,
+            "shape": [
+                2
+            ],
+            "data": [
+                34,
+                33
+            ]
+        }
+    ]
+}
