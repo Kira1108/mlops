@@ -1,0 +1,17 @@
+2022-12-30 04:29:26,006 [mlserver] INFO - Using asyncio event-loop policy: uvloop
+2022-12-30 04:29:26,615 [mlserver] WARNING - Model name 'iris_sk' is different than model's folder name 'sklearn-v2-serving'.
+2022-12-30 04:29:26,662 [mlserver.parallel] DEBUG - Starting response processing loop...
+2022-12-30 04:29:26,667 [mlserver.rest] INFO - HTTP server running on http://0.0.0.0:8080
+INFO:     Started server process [9953]
+INFO:     Waiting for application startup.
+2022-12-30 04:29:26,698 [mlserver.metrics] INFO - Metrics server running on http://0.0.0.0:8082
+2022-12-30 04:29:26,698 [mlserver.metrics] INFO - Prometheus scraping endpoint can be accessed on http://0.0.0.0:8082/metrics
+INFO:     Started server process [9953]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2022-12-30 04:29:26,703 [mlserver.grpc] INFO - gRPC server running on http://0.0.0.0:8081
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2022-12-30 04:29:28,949 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+2022-12-30 04:29:28,952 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
