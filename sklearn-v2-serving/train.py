@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import svm
 import pandas as pd
 import joblib
-from settings_creator import SklearnModelSettings
+from settings_creator import SklearnModelSettings, create_request
 
 iris = load_iris()
 y = iris['target']
@@ -17,11 +17,7 @@ classifier.fit(X_train, y_train)
 model_file_name = "iris_sk.joblib"
 joblib.dump(classifier, model_file_name)
 
-
-
-
 feature_names = iris.feature_names
-# write model-settings.json
 df = pd.DataFrame(X, columns = feature_names)
 
 
@@ -31,6 +27,11 @@ SklearnModelSettings(
         df = df,
         version = "v0.1.0",
     ).dump_json()
+
+
+create_request(df, n = 3)
+
+
 
 
 

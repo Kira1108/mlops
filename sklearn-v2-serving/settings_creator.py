@@ -102,6 +102,17 @@ class SklearnModelSettings(SettingsCreator):
             inputs = inputs
         )
         return model_settings
+    
+def create_request(df,n = 3, dump = True):
+    req = PandasCodec.encode_request(df.head(n))
+    req.parameters = {'content_type':"pd"}
+    j = req.json(include = {'parameters','inputs','id'}, indent = 2, exclude_none = True)
+    if dump:
+        with open("sample_request.json",'w') as f:
+            f.write(j)
+    return j
+        
+
 
     
 
