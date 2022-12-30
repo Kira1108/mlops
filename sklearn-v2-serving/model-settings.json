@@ -1,0 +1,42 @@
+{
+  "name": "iris_sk",
+  "implementation": "mlserver_sklearn.SKLearnModel",
+  "parameters": {
+    "uri": "iris_sk.joblib",
+    "version": "v0.1.0"
+  },
+  "inputs": [
+    {
+      "name": "sepal length (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "sepal width (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "petal length (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    },
+    {
+      "name": "petal width (cm)",
+      "datatype": "FP64",
+      "parameters": null,
+      "shape": [
+        -1
+      ]
+    }
+  ]
+}
