@@ -16,6 +16,7 @@ entry_points: # how to run the project
 
 ## 2. Define the python environment
 python version and dependencies are defined in `python_env.yaml` file. It contains the following sections:
+Since you have a python_env.yaml file, mlflow will use pyenv by default. not conda or other virual enviroment tools.
 ```yaml
 python: "3.8" # which pythoh to use
 build_dependencies: # how to install dependencies
