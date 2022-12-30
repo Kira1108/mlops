@@ -6,3 +6,4 @@ env*
 */*agaricus.txt.train
 __pycache__
 */*mlruns
+mlflow
