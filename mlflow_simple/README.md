@@ -30,16 +30,17 @@ with mlflow.start_run():
 
 ## Write a MLproject file
 ```yaml
+
 name: tutorial
 
-python_env: conda.yaml # points to conda environment definition file
+conda_env: conda.yaml # points to conda environment definition file
 
 entry_points:
   main:
-    parameters: # this model taks 2 parameters, alpha and l1_ratio
+    parameters:  # this model taks 2 parameters, alpha and l1_ratio
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.1}
-    command: "python train.py {alpha} {l1_ratio}" # command used to run the model
+    command: "python train.py {alpha} {l1_ratio}"  # command used to run the model
 ```
 
 ## Write Environment definition file `conda.yaml`

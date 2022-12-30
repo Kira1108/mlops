@@ -1,0 +1,15 @@
+artifact_uri: file:///data/code/wanghuan/mlops/mlruns/0/6300c3cdb973433db0d1f080af320ddd/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6300c3cdb973433db0d1f080af320ddd
+run_name: valuable-ape-444
+run_uuid: 6300c3cdb973433db0d1f080af320ddd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672380968203
+status: 1
+tags: []
+user_id: wanghuan

@@ -1,0 +1,15 @@
+artifact_uri: file:///data/code/wanghuan/mlops/mlruns/0/494d74b2dfa0449a9b28e50f7752fbf2/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 494d74b2dfa0449a9b28e50f7752fbf2
+run_name: handsome-gnu-891
+run_uuid: 494d74b2dfa0449a9b28e50f7752fbf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1672380998055
+status: 1
+tags: []
+user_id: wanghuan
