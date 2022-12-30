@@ -15,6 +15,14 @@ log_metric("foo", 1)
 log.artifact("output")
 ```
 
+## Log to remote tracking server
+Set mlflow tracking uri and experiment name
+```python
+import mlflow
+mlflow.set_tracking_uri("http://YOUR-SERVER:4040")
+mlflow.set_experiment("my-experiment")
+
+```
 
 ## Run MLflow project
 It takes long time to install environment and run the project.
