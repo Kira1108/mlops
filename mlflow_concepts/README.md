@@ -22,10 +22,16 @@ Runs存储在什么地方？
 track到远程可以设置环境变量 `MLFLOW_TRACKING_URI`, 也可以在代码中设置 `mlflow.set_tracking_uri()`
 
 URI 可选项
-- 本地文件系统 (file:/my/local/dir)
-- 数据库 <dialect>+<driver>://<username>:<password>@<host>:<port>/<database>. 
-- HTTP 服务器 (https://my-server:5000)
-- Databricks 工作空间 (databricks://<profileName>）
+- 本地文件系统 (`file:/my/local/dir`)
+- 数据库 `<dialect>+<driver>://<username>:<password>@<host>:<port>/<database>`. 
+- HTTP 服务器 (`https://my-server:5000`)
+- Databricks 工作空间 (`databricks://<profileName>`）
+
+
+How to track?
+![ML Flow tracking](mlflow_tracking.png)
+
+https://mlflow.org/docs/latest/tracking.html
 
 
 
