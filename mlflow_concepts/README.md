@@ -4,7 +4,7 @@
 ![ML Flow Components](mlflow_components.png)
 ------
 
-## 1. MLflow Tracking
+## 1. MLflow Tracking concept
 Tracking以runs的概念组织，执行同一个data science code多次，产生多次runs，记录每次运行中需要跟踪的各种参数。
 
 - 代码版本。
@@ -28,7 +28,7 @@ URI 可选项
 - Databricks 工作空间 (`databricks://<profileName>`）
 
 
-How to track?
+## 2.How to track?
 ![ML Flow tracking](mlflow_tracking.png)
 
 https://mlflow.org/docs/latest/tracking.html
