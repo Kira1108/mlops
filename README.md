@@ -9,9 +9,9 @@
 
 [No,you don't need mlops](https://medium.com/becoming-human/no-you-dont-need-mlops-5e1ce9fdaa4b)
 
-有的时候你需要吹Mlops的牛逼，比如强行在公司找活儿， 或者强行吹嘘自己的产品。     
-有的时候你也可以大大方方的说，过度工程化和自动化，是一件极其傻逼的事情。      
-然而更多的时候，你需要根据自己的实际情况，选择合适的level of abstraction.    
+> 有的时候你需要吹Mlops的牛逼，比如强行在公司找活儿， 或者强行吹嘘自己的产品。     
+> 有的时候你也可以大大方方的说，过度工程化和自动化，是一件极其傻逼的事情。      
+> 然而更多的时候，你需要根据自己的实际情况，选择合适的level of abstraction.    
 
 ## 2. 玩一下所谓的Mlops
 
