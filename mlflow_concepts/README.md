@@ -34,6 +34,22 @@ URI 可选项
 https://mlflow.org/docs/latest/tracking.html
 
 
+## 3. Mlflow project
+
+A folder contains
+- MLproject file
+- Environment definition file
+- python code files
+
+
+![ML Flow project](mlflow_project.png)     
+
+Other data science use mlflow to run your project
+
+
+
+
+
 
 
 
