@@ -1,0 +1,14 @@
+2023-01-03 03:53:40,809 [mlserver] INFO - Using asyncio event-loop policy: uvloop
+2023-01-03 03:53:40,859 [mlserver.parallel] DEBUG - Starting response processing loop...
+2023-01-03 03:53:40,861 [mlserver.rest] INFO - HTTP server running on http://0.0.0.0:8080
+INFO:     Started server process [23371]
+INFO:     Waiting for application startup.
+2023-01-03 03:53:40,876 [mlserver.metrics] INFO - Metrics server running on http://0.0.0.0:8082
+2023-01-03 03:53:40,876 [mlserver.metrics] INFO - Prometheus scraping endpoint can be accessed on http://0.0.0.0:8082/metrics
+INFO:     Started server process [23371]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-01-03 03:53:40,881 [mlserver.grpc] INFO - gRPC server running on http://0.0.0.0:8081
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)

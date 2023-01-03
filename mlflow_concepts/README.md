@@ -1,8 +1,7 @@
 # MLflow Concepts
 
 就看着一张图，大概知道mlflow的核心概念了
-![ML Flow Components](mlflow_components.png)
-------
+![ML Flow Components](mlflow_components.png)      
 
 ## 1. MLflow Tracking concept
 Tracking以runs的概念组织，执行同一个data science code多次，产生多次runs，记录每次运行中需要跟踪的各种参数。
@@ -45,6 +44,61 @@ A folder contains
 ![ML Flow project](mlflow_project.png)     
 
 Other data science use mlflow to run your project
+
+
+```yaml
+name: My Project                         # 项目名称
+
+python_env: python_env.yaml              # 环境文件名，必须在当前文件夹能找到
+# or
+# conda_env: my_env.yaml
+# or
+# docker_env:
+#    image:  mlflow-docker-example
+
+entry_points:
+  main:                                  # 第一个entry point，定义参数，运行命令
+    parameters:
+      data_file: path
+      regularization: {type: float, default: 0.1}
+    command: "python train.py -r {regularization} {data_file}"
+  validate:                              # 第二个entry point
+    parameters:
+      data_file: path
+    command: "python validate.py {data_file}"
+```
+
+```yaml
+# 选择python版本
+python: "3.8.15"
+# Dependencies required to build packages. This field is optional.
+build_dependencies:
+  - pip
+  - setuptools
+  - wheel==0.37.1
+# python包依赖
+dependencies:
+  - mlflow
+  - scikit-learn==1.0.2
+```
+
+[mlflow project definition](https://mlflow.org/docs/latest/projects.html#project-directories)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
