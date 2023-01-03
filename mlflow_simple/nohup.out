@@ -12,3 +12,6 @@ INFO:     Application startup complete.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
 INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+INFO:     35.161.52.161:62696 - "GET / HTTP/1.1" 404 Not Found
+INFO:     35.161.52.161:62696 - "GET /docs HTTP/1.1" 200 OK
+INFO:     35.161.52.161:62696 - "GET /openapi.json HTTP/1.1" 200 OK

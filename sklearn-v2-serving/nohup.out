@@ -15,3 +15,106 @@ INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
 INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
 2022-12-30 04:29:28,949 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
 2022-12-30 04:29:28,952 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+2023-01-03 06:12:27,292 [mlserver] INFO - Using asyncio event-loop policy: uvloop
+2023-01-03 06:12:27,890 [mlserver] WARNING - Model name 'iris_sk' is different than model's folder name 'sklearn-v2-serving'.
+2023-01-03 06:12:27,928 [mlserver.parallel] DEBUG - Starting response processing loop...
+2023-01-03 06:12:27,944 [mlserver.rest] INFO - HTTP server running on http://0.0.0.0:8080
+INFO:     Started server process [36238]
+INFO:     Waiting for application startup.
+2023-01-03 06:12:27,966 [mlserver.metrics] INFO - Metrics server running on http://0.0.0.0:8082
+2023-01-03 06:12:27,966 [mlserver.metrics] INFO - Prometheus scraping endpoint can be accessed on http://0.0.0.0:8082/metrics
+INFO:     Started server process [36238]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-01-03 06:12:27,980 [mlserver.grpc] INFO - gRPC server running on http://0.0.0.0:8081
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2023-01-03 06:12:30,297 [mlserver] INFO - Couldn't load model 'iris_sk'. Model will be removed from registry.
+2023-01-03 06:12:30,297 [mlserver.parallel] ERROR - An error occurred processing a model update of type 'Load'.
+Traceback (most recent call last):
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/worker.py", line 142, in _process_model_update
+    await self._model_registry.load(model_settings)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 283, in load
+    return await self._models[model_settings.name].load(model_settings)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 141, in load
+    await self._load_model(new_model)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 158, in _load_model
+    await model.load()
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver_sklearn/sklearn.py", line 34, in load
+    model_uri = await get_model_uri(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/utils.py", line 44, in get_model_uri
+    raise InvalidModelURI(settings.name, full_model_path)
+mlserver.errors.InvalidModelURI: Invalid URI specified for model iris_sk (/data/code/wanghuan/mlops/sklearn-v2-serving/iris_sk.joblib)
+2023-01-03 06:12:30,300 [mlserver] INFO - Couldn't load model 'iris_sk'. Model will be removed from registry.
+2023-01-03 06:12:30,304 [mlserver.parallel] ERROR - An error occurred processing a model update of type 'Unload'.
+Traceback (most recent call last):
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/worker.py", line 144, in _process_model_update
+    await self._model_registry.unload_version(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 292, in unload_version
+    await model_registry.unload_version(version)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 194, in unload_version
+    model = await self.get_model(version)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 230, in get_model
+    raise ModelNotFound(self._name, version)
+mlserver.errors.ModelNotFound: Model iris_sk with version v0.1.0 not found
+2023-01-03 06:12:30,305 [mlserver] ERROR - Some of the models failed to load during startup!
+Traceback (most recent call last):
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/server.py", line 99, in start
+    await asyncio.gather(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 283, in load
+    return await self._models[model_settings.name].load(model_settings)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 141, in load
+    await self._load_model(new_model)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/registry.py", line 154, in _load_model
+    model = await callback(model)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/pool.py", line 59, in load_model
+    await self._dispatcher.dispatch_update(load_message)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/dispatcher.py", line 98, in dispatch_update
+    return await asyncio.gather(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/dispatcher.py", line 113, in _dispatch_update
+    return await self._dispatch(worker_update)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/dispatcher.py", line 121, in _dispatch
+    return await self._wait_response(internal_id)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/dispatcher.py", line 127, in _wait_response
+    inference_response = await async_response
+mlserver.parallel.errors.WorkerError: mlserver.errors.InvalidModelURI: Invalid URI specified for model iris_sk (/data/code/wanghuan/mlops/sklearn-v2-serving/iris_sk.joblib)
+2023-01-03 06:12:30,306 [mlserver.parallel] INFO - Waiting for inference pool shutdown
+2023-01-03 06:12:30,659 [mlserver.parallel] INFO - Inference pool shutdown complete
+2023-01-03 06:12:30,660 [mlserver.grpc] INFO - Waiting for gRPC server shutdown
+2023-01-03 06:12:30,664 [mlserver.grpc] INFO - gRPC server shutdown complete
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [36238]
+INFO:     Application shutdown complete.
+INFO:     Finished server process [36238]
+2023-01-03 06:15:44,873 [mlserver] INFO - Using asyncio event-loop policy: uvloop
+2023-01-03 06:15:45,365 [mlserver] WARNING - Model name 'iris_sk' is different than model's folder name 'sklearn-v2-serving'.
+2023-01-03 06:15:45,411 [mlserver.parallel] DEBUG - Starting response processing loop...
+2023-01-03 06:15:45,413 [mlserver.rest] INFO - HTTP server running on http://0.0.0.0:8080
+INFO:     Started server process [43059]
+INFO:     Waiting for application startup.
+2023-01-03 06:15:45,442 [mlserver.metrics] INFO - Metrics server running on http://0.0.0.0:8082
+2023-01-03 06:15:45,443 [mlserver.metrics] INFO - Prometheus scraping endpoint can be accessed on http://0.0.0.0:8082/metrics
+INFO:     Started server process [43059]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-01-03 06:15:45,462 [mlserver.grpc] INFO - gRPC server running on http://0.0.0.0:8081
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+INFO:     35.161.52.161:62889 - "GET /docs HTTP/1.1" 200 OK
+2023-01-03 06:15:47,733 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+2023-01-03 06:15:47,735 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+INFO:     35.161.52.161:62889 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     35.161.52.161:62905 - "POST /v2/models/iris_sk/infer?model_version=v0.1.0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60078 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60078 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60080 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60080 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60086 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37820 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37820 - "GET /openapi.json HTTP/1.1" 200 OK
