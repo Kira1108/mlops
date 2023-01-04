@@ -1,0 +1,51 @@
+2023/01/04 06:54:30 INFO mlflow.models.flavor_backend_registry: Selected backend for flavor 'python_function'
+2023/01/04 06:54:30 INFO mlflow.utils.virtualenv: Installing python 3.8.8 if it does not exist
+2023/01/04 06:54:30 INFO mlflow.utils.virtualenv: Environment /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3 already exists
+2023/01/04 06:54:30 INFO mlflow.utils.environment: === Running command '['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3/bin/activate && python -c ""']'
+2023/01/04 06:54:30 INFO mlflow.utils.environment: === Running command '['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3/bin/activate && exec gunicorn --timeout=60 -b 0.0.0.0:8081 -w 1 ${GUNICORN_CMD_ARGS} -- mlflow.pyfunc.scoring_server.wsgi:app']'
+[2023-01-04 06:54:30 +0000] [53057] [INFO] Starting gunicorn 20.1.0
+[2023-01-04 06:54:30 +0000] [53057] [ERROR] Connection in use: ('0.0.0.0', 8081)
+[2023-01-04 06:54:30 +0000] [53057] [ERROR] Retrying in 1 second.
+[2023-01-04 06:54:31 +0000] [53057] [ERROR] Connection in use: ('0.0.0.0', 8081)
+[2023-01-04 06:54:31 +0000] [53057] [ERROR] Retrying in 1 second.
+[2023-01-04 06:54:32 +0000] [53057] [ERROR] Connection in use: ('0.0.0.0', 8081)
+[2023-01-04 06:54:32 +0000] [53057] [ERROR] Retrying in 1 second.
+[2023-01-04 06:54:33 +0000] [53057] [ERROR] Connection in use: ('0.0.0.0', 8081)
+[2023-01-04 06:54:33 +0000] [53057] [ERROR] Retrying in 1 second.
+[2023-01-04 06:54:34 +0000] [53057] [ERROR] Connection in use: ('0.0.0.0', 8081)
+[2023-01-04 06:54:34 +0000] [53057] [ERROR] Retrying in 1 second.
+[2023-01-04 06:54:35 +0000] [53057] [ERROR] Can't connect to ('0.0.0.0', 8081)
+Traceback (most recent call last):
+  File "/data/code/wanghuan/aiops/env/bin/mlflow", line 8, in <module>
+    sys.exit(cli())
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlflow/models/cli.py", line 105, in serve
+    return get_flavor_backend(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlflow/pyfunc/backend.py", line 229, in serve
+    return self.prepare_env(local_path).execute(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlflow/utils/environment.py", line 597, in execute
+    return _exec_cmd(
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlflow/utils/process.py", line 117, in _exec_cmd
+    raise ShellCommandException.from_completed_process(comp_process)
+mlflow.utils.process.ShellCommandException: Non-zero exit code: 1
+Command: ['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3/bin/activate && exec gunicorn --timeout=60 -b 0.0.0.0:8081 -w 1 ${GUNICORN_CMD_ARGS} -- mlflow.pyfunc.scoring_server.wsgi:app']
+2023/01/04 06:55:08 INFO mlflow.models.flavor_backend_registry: Selected backend for flavor 'python_function'
+2023/01/04 06:55:08 INFO mlflow.utils.virtualenv: Installing python 3.8.8 if it does not exist
+2023/01/04 06:55:08 INFO mlflow.utils.virtualenv: Environment /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3 already exists
+2023/01/04 06:55:08 INFO mlflow.utils.environment: === Running command '['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3/bin/activate && python -c ""']'
+2023/01/04 06:55:08 INFO mlflow.utils.environment: === Running command '['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939afed92f7c86b373dd6803554ca3/bin/activate && exec gunicorn --timeout=60 -b 0.0.0.0:8083 -w 1 ${GUNICORN_CMD_ARGS} -- mlflow.pyfunc.scoring_server.wsgi:app']'
+[2023-01-04 06:55:09 +0000] [54657] [INFO] Starting gunicorn 20.1.0
+[2023-01-04 06:55:09 +0000] [54657] [INFO] Listening at: http://0.0.0.0:8083 (54657)
+[2023-01-04 06:55:09 +0000] [54657] [INFO] Using worker: sync
+[2023-01-04 06:55:09 +0000] [54667] [INFO] Booting worker with pid: 54667
