@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   mlflow:
-    build: ./project/mlflow
+    build: ./project/mlflow-service
     command: mlflow server --backend-store-uri postgresql://postgres:postgres@mlflowdb:5432/tracking --default-artifact-root s3://test-repo-wanghuan --host 0.0.0.0 --no-serve-artifacts
     volumes:
-      - ./project/mlflow:/usr/src/app
+      - ./project/mlflow-service:/usr/src/app
     ports:
       - 10086:5000
     environment:
