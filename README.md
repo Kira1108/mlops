@@ -3,11 +3,13 @@
 
 ## 1. Concepts
 
-[Google Mlops Article](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+[谷歌MLops文章](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
 
-[Microsoft Mlops Article](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model)
+[微软MLops文章](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model)
 
-[No,you don't need mlops](https://medium.com/becoming-human/no-you-dont-need-mlops-5e1ce9fdaa4b)
+[你其实不需要MLops](https://medium.com/becoming-human/no-you-dont-need-mlops-5e1ce9fdaa4b)
+
+[绝对不在公司以外的地方给ML增加一层新的复杂性](https://www.datanami.com/2022/03/30/birds-arent-real-and-neither-is-mlops/)
 
 > 有的时候你需要吹Mlops的牛逼，比如强行在公司找活儿， 或者强行吹嘘自己的产品。     
 > 有的时候你也可以大大方方的说，过度工程化和自动化，是一件极其傻逼的事情。      
@@ -16,7 +18,9 @@
 
 **mlflow 搞定了文件的本地存储，远程存储，运行参数的本地存储，远程存储，以及增删改查服务。**   
 **mlserver 搞定了根据元数据，模型文件，运行时等信息，把模型变成一个HTTP或者gRPC接口。**      
-然后他们各自搞定了一些分布式的东西，就这样了。    
+然后他们各自搞定了一些分布式的东西，就这样了。        
+
+总结一下：MLops，东西不好用，屁事儿真不少。  
 
 ## 2. 玩一下所谓的Mlops
 
