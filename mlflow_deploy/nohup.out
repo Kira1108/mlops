@@ -49,3 +49,7 @@ Command: ['bash', '-c', 'source /home/wanghuan/.mlflow/envs/mlflow-c1fd5393e8939
 [2023-01-04 06:55:09 +0000] [54657] [INFO] Listening at: http://0.0.0.0:8083 (54657)
 [2023-01-04 06:55:09 +0000] [54657] [INFO] Using worker: sync
 [2023-01-04 06:55:09 +0000] [54667] [INFO] Booting worker with pid: 54667
+[2023-01-04 08:07:22 +0000] [54657] [INFO] Handling signal: hup
+[2023-01-04 08:07:22 +0000] [54657] [INFO] Hang up: Master
+[2023-01-04 08:07:22 +0000] [54657] [WARNING] Worker with pid 54667 was terminated due to signal 1
+[2023-01-04 08:07:22 +0000] [6920] [INFO] Booting worker with pid: 6920

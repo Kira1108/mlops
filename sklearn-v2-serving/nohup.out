@@ -118,3 +118,36 @@ INFO:     127.0.0.1:60080 - "GET /openapi.json HTTP/1.1" 200 OK
 INFO:     127.0.0.1:60086 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
 INFO:     127.0.0.1:37820 - "GET /docs HTTP/1.1" 200 OK
 INFO:     127.0.0.1:37820 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57182 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57182 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57182 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57182 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59228 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59234 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59234 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59234 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59234 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59234 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60158 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35200 - "GET /v2/models/iris_sk/versions/v0.1.0/ready HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38606 - "GET /v2/models/iris_sk/versions/v0.1.0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51870 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50212 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37076 - "POST /v2/models/iris_sk/versionsv0.1.0/infer HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38296 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:39898 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 422 Unprocessable Entity
+2023-01-10 07:05:04,424 [mlserver.parallel] ERROR - An error occurred calling method 'predict' from model 'iris_sk'.
+Traceback (most recent call last):
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/parallel/worker.py", line 122, in _process_request
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver_sklearn/sklearn.py", line 45, in predict
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver_sklearn/sklearn.py", line 95, in _get_model_outputs
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/model.py", line 114, in decode_request
+  File "/data/code/wanghuan/aiops/env/lib/python3.8/site-packages/mlserver/codecs/utils.py", line 236, in decode_request
+mlserver.codecs.errors.CodecError: There was an error encoding / decoding the payload: The 'np' codec only supports a single input tensor (4 were received)
+INFO:     127.0.0.1:47512 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:48526 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39832 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:40946 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52496 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:37818 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40410 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
