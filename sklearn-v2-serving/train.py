@@ -18,6 +18,14 @@ model_file_name = "iris_sk.joblib"
 joblib.dump(classifier, model_file_name)
 
 feature_names = iris.feature_names
+
+col_name_mapper = {"sepal length (cm)": "sepal_length",
+                   "sepal width (cm)" : "sepal_width",
+                   "petal length (cm)":"petal_length",
+                   "petal width (cm)" :"petal_width"}
+
+feature_names = [col_name_mapper[f] for f in feature_names]
+
 df = pd.DataFrame(X, columns = feature_names)
 
 

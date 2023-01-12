@@ -151,3 +151,28 @@ INFO:     127.0.0.1:40946 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/
 INFO:     127.0.0.1:52496 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 422 Unprocessable Entity
 INFO:     127.0.0.1:37818 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
 INFO:     127.0.0.1:40410 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41742 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+2023-01-12 07:49:40,254 [mlserver] INFO - Using asyncio event-loop policy: uvloop
+2023-01-12 07:49:40,805 [mlserver] WARNING - Model name 'iris_sk' is different than model's folder name 'sklearn-v2-serving'.
+2023-01-12 07:49:40,842 [mlserver.parallel] DEBUG - Starting response processing loop...
+2023-01-12 07:49:40,848 [mlserver.rest] INFO - HTTP server running on http://0.0.0.0:8080
+INFO:     Started server process [5862]
+INFO:     Waiting for application startup.
+2023-01-12 07:49:40,951 [mlserver.metrics] INFO - Metrics server running on http://0.0.0.0:8082
+2023-01-12 07:49:40,951 [mlserver.metrics] INFO - Prometheus scraping endpoint can be accessed on http://0.0.0.0:8082/metrics
+INFO:     Started server process [5862]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-01-12 07:49:40,954 [mlserver.grpc] INFO - gRPC server running on http://0.0.0.0:8081
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2023-01-12 07:49:43,251 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+2023-01-12 07:49:43,252 [mlserver] INFO - Loaded model 'iris_sk' succesfully.
+INFO:     127.0.0.1:38948 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38948 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:38948 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38946 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38964 - "POST /v2/models/iris_sk/versions/v0.1.0/infer HTTP/1.1" 200 OK

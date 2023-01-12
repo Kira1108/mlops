@@ -7,7 +7,7 @@
   },
   "inputs": [
     {
-      "name": "sepal length (cm)",
+      "name": "sepal_length",
       "datatype": "FP64",
       "parameters": null,
       "shape": [
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "name": "sepal width (cm)",
+      "name": "sepal_width",
       "datatype": "FP64",
       "parameters": null,
       "shape": [
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "name": "petal length (cm)",
+      "name": "petal_length",
       "datatype": "FP64",
       "parameters": null,
       "shape": [
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "name": "petal width (cm)",
+      "name": "petal_width",
       "datatype": "FP64",
       "parameters": null,
       "shape": [
